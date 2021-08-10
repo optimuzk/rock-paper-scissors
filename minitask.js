@@ -1,12 +1,12 @@
 function playerSelection(){
-    userInput = prompt('Your selection (rock, paper, scissors):');
-    fixed = userInput.toLowerCase();
+    let userInput = prompt('Your selection (rock, paper, scissors):');
+    let fixed = userInput.toLowerCase();
     return fixed;
 }
 
 function computerPlay(){
-    array = ['paper', 'rock', 'scissors'];
-    random = Math.floor(Math.random() * 3);
+    const array = ['paper', 'rock', 'scissors'];
+    let random = Math.floor(Math.random() * 3);
     return array[random];
 }
 
@@ -25,15 +25,15 @@ function compare(user, computer){
 }
 
 function game(){
-    contUser = 0;
-    contComp = 0;
+    let contUser = 0;
+    let contComp = 0;
 
     while(true){
-        user = playerSelection();
-        computer = computerPlay();
+        let user = playerSelection();
+        let computer = computerPlay();
         console.log(user);
         console.log(computer);
-        value = compare(user, computer);
+        let value = compare(user, computer);
 
         switch (value) {
             case 1:
@@ -62,7 +62,7 @@ function game(){
 
 // programada
 
-let ganador = game();
+const ganador = game();
 
 if (ganador == 1){
     console.log("You win!")
