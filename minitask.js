@@ -1,5 +1,5 @@
 function playerSelection(){
-    userInput = prompt('Tu seleccion:');
+    userInput = prompt('Your selection (rock, paper, scissors):');
     fixed = userInput.toLowerCase();
     return fixed;
 }
@@ -42,13 +42,13 @@ function game(){
             case 0:
                 contComp+=1;
             case 2:
-                console.log("empate");
+                console.log("It's a tie!");
             default:
                 break;
         }
 
-        console.log("Tus puntos: ", contUser);
-        console.log("Tu rival: ", contComp);
+        console.log("Your score: ", contUser);
+        console.log("Computer score: ", contComp);
 
         if (contUser > 4){
             return 1;
@@ -65,8 +65,8 @@ function game(){
 let ganador = game();
 
 if (ganador == 1){
-    console.log("Haz ganado!")
+    console.log("You win!")
 }
 else{
-    console.log("Mas suerte la proxima vez!")
+    console.log("Good luck next time!")
 }
