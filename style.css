@@ -36,8 +36,8 @@ header p {
 
 #options {
   display: flex;
-  justify-content: center;
-  border-style: solid;
+  width: 90%;
+
 }
 #options img {
   width: 100%;
