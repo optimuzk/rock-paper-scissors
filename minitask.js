@@ -81,5 +81,3 @@ images.forEach((image) => {
         game(whoScore, userValue, compValue, resultsDiv, resultsText, resultsImages, playerImage, compImage);
     });
 });
-
-// git commit -m "Se agrego una interfaz visual, junto con modificaciones al codigo javascript"
