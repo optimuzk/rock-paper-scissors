@@ -1,13 +1,25 @@
-function playerSelection(){
-    let userInput = prompt('Your selection (rock, paper, scissors):');
-    let fixed = userInput.toLowerCase();
-    return fixed;
-}
+const images = document.querySelectorAll("img");
 
 function computerPlay(){
     const array = ['paper', 'rock', 'scissors'];
     let random = Math.floor(Math.random() * 3);
     return array[random];
+}
+
+function giveValue(value){
+    switch (value) {
+        case "1":
+            return "rock"
+            break;
+        case "2":
+            return "scissors"
+            break;
+        case "3":
+            return "paper"
+            break;
+        default:
+            break;
+    }
 }
 
 function compare(user, computer){
@@ -24,49 +36,50 @@ function compare(user, computer){
     }
 }
 
-function game(){
-    let contUser = 0;
-    let contComp = 0;
-
-    while(true){
-        let user = playerSelection();
-        let computer = computerPlay();
-        console.log(user);
-        console.log(computer);
-        let value = compare(user, computer);
-
-        switch (value) {
-            case 1:
-                contUser+=1;
-                break;
-            case 0:
-                contComp+=1;
-            case 2:
-                console.log("It's a tie!");
-            default:
-                break;
-        }
-
-        console.log("Your score: ", contUser);
-        console.log("Computer score: ", contComp);
-
-        if (contUser > 4){
-            return 1;
-        }
-        if (contComp > 4){
-            return 0;
-        }
-
+function game(whoScore, userValue, compValue, resultsDiv, resultsText, resultsImages, playerImage, compImage){
+    let theWinnerIs;
+    switch (whoScore) {
+        case 2:
+            console.log("its a tie!");
+            resultsDiv.style.cssText = "background-color: #eccf4d";
+            theWinnerIs = "Es un empate!";
+            break;
+        case 1:
+            console.log("You win!");
+            resultsDiv.style.cssText = "background-color: #4dec5a"
+            theWinnerIs = "Ganaste!";
+            break;
+        case 0:
+            console.log("You lost!");
+            resultsDiv.style.cssText = "background-color: #ec4d4d"
+            theWinnerIs = "Perdiste :(";
+            break;
+        default:
+            break;
     }
+    resultsText.textContent = theWinnerIs;
+    resultsDiv.appendChild(resultsText);
+    playerImage.src = userValue+".png";
+    compImage.src = compValue+".png";
+    console.log(compImage);
+    resultsImages.appendChild(playerImage);
+    resultsImages.appendChild(compImage);
 }
 
-// programada
+const resultsDiv = document.querySelector("#console-log");
+const resultsText = document.createElement("h2");
+const resultsImages = document.querySelector("#console-images");
+const playerImage = document.createElement("img");
+const compImage = document.createElement("img");
 
-const ganador = game();
+images.forEach((image) => {
+    image.addEventListener('click', () => {
+        let userValue = giveValue(image.id);
+        let compValue = computerPlay();
+        let whoScore = compare(userValue, compValue);
+        console.log("You:"+userValue+" Your rival:"+compValue);
+        game(whoScore, userValue, compValue, resultsDiv, resultsText, resultsImages, playerImage, compImage);
+    });
+});
 
-if (ganador == 1){
-    console.log("You win!")
-}
-else{
-    console.log("Good luck next time!")
-}
+// git commit -m "Se agrego una interfaz visual, junto con modificaciones al codigo javascript"

@@ -1,8 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 body{
-    background-color:#959595;
+    background-color: #ffffff;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-header{
-    font-size: 150px;
-    text-align: center;
-    margin-top: 200px;
+
+#background {
+  background-color: #3C8DAD;
+  width: 80%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 12px 12px rgb(197, 197, 197);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+img:hover {
+  transform: rotate(2deg);
+  border: 1px solid black;
+}
+
+header {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  color: #ffffff;
+}
+header p {
+  color: rgb(46, 46, 46);
+}
+
+#options {
+  display: flex;
+  justify-content: space-around;
+}
+
+#results {
+  width: 100%;
+  height: auto;
+  color: rgb(46, 46, 46);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  background-color: #3C8DAD;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#console-log {
+  margin-top: 20px;
+  font-family: 'Roboto Mono', monospace;
+  padding: 10px 10px 10px 10px;
+  background-color: #ffffff;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+#console-images {
+  display: flex;
+  justify-content: center;
+}
+
+#console-images img{
+  width: 30%;
+  height: auto;
 }
