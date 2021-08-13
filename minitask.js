@@ -41,12 +41,12 @@ function game(whoScore, userValue, compValue, resultsDiv, resultsText, resultsIm
     switch (whoScore) {
         case 2:
             console.log("its a tie!");
-            resultsDiv.style.cssText = "background-color: #eccf4d";
+            resultsDiv.style.cssText = "background-color: #F4AC32";
             theWinnerIs = "Es un empate!";
             break;
         case 1:
             console.log("You win!");
-            resultsDiv.style.cssText = "background-color: #4dec5a"
+            resultsDiv.style.cssText = "background-color: #226F54"
             theWinnerIs = "Ganaste!";
             break;
         case 0:
@@ -62,6 +62,7 @@ function game(whoScore, userValue, compValue, resultsDiv, resultsText, resultsIm
     playerImage.src = userValue+".png";
     compImage.src = compValue+".png";
     console.log(compImage);
+    resultsImages.style.cssText = "margin-top: 10px;"
     resultsImages.appendChild(playerImage);
     resultsImages.appendChild(compImage);
 }

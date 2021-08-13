@@ -1,52 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+:root {
+  --main-color: #1d3557;
+  --shadow-color: hsl(215, 10%, 23%);
+  --sqr-color: #b62a36;
+  --main-text-color: #f1faee;
+}
+
 body{
-    background-color: #ffffff;;
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
 #background {
-  background-color: #3C8DAD;
+  background-color: var(--sqr-color);
   width: 80%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 12px 12px rgb(197, 197, 197);
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-img:hover {
-  transform: rotate(2deg);
-  border: 1px solid black;
+  box-shadow: 12px 12px var(--shadow-color);
 }
 
 header {
   text-align: center;
   font-family: 'Roboto Mono', monospace;
-  color: #ffffff;
+  color: var(--main-text-color);
 }
 header p {
-  color: rgb(46, 46, 46);
+  color: var(--main-text-color);
 }
 
 #options {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  border-style: solid;
+}
+#options img {
+  width: 100%;
+  height: auto;
+}
+#options img:hover {
+  transform: rotate(2deg);
+  border: 1px solid black;
 }
 
 #results {
   width: 100%;
   height: auto;
-  color: rgb(46, 46, 46);
+  color: var(--main-text-color);
   font-family: 'Roboto Mono', monospace;
   font-size: 15px;
-  background-color: #3C8DAD;
+  background-color: var(--sqr-color);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
@@ -57,9 +65,10 @@ header p {
   margin-top: 20px;
   font-family: 'Roboto Mono', monospace;
   padding: 10px 10px 10px 10px;
-  background-color: #ffffff;
-  color: #ffffff;
+  background-color: var(--main-text-color);
+  color: var(--main-text-color);
   border-radius: 20px;
+  box-shadow: 10px 10px var(--shadow-color);
 }
 
 #console-images {
