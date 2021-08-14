@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
-  --main-color: #1d3557;
-  --shadow-color: hsl(215, 10%, 23%);
-  --sqr-color: #b62a36;
+  --main-color: #2C2E43;
+  --shadow-color: #2e2e2e;
+  --sqr-color: #595260;
   --main-text-color: #f1faee;
 }
 
@@ -79,4 +79,16 @@ header p {
 #console-images img{
   width: 30%;
   height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  #options img{
+    width: fit-content;
+  }
+  #background{
+    margin-top: 40px;
+  }
+  #console-log{
+    margin-top: 40px;
+  }
 }
