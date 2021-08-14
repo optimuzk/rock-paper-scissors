@@ -53,12 +53,32 @@ header p {
   height: auto;
   color: var(--main-text-color);
   font-family: 'Roboto Mono', monospace;
-  font-size: 15px;
   background-color: var(--sqr-color);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
   justify-content: space-around;
+}
+
+#player{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+#player p{
+  color: rgb(28, 175, 28);
+  font-size: 40px;
+  margin-left: 20px;
+}
+#computer{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+} 
+#computer p{
+  color: rgb(175, 45, 28);
+  font-size: 40px;
+  margin-left: 20px;
 }
 
 #console-log {
